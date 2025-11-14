@@ -1,0 +1,20 @@
+import java.util.Scanner;
+ public class Lab8Task5 {
+  public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  System.out.print("Enter a string: ");
+  String s = sc.nextLine();
+  System.out.println("Number of letters are: " + countLetter(s));
+ }
+
+  public static int countLetter(String s) {
+  int count = 0;
+ for(int i = 0; i < s.length(); i++) {
+  if 
+    (Character.isLetter(s.charAt(i)))
+     count++;
+}
+     return count++;
+   
+  }
+}
