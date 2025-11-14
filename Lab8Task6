@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Lab8Task6 {
+    public static String capitalize(String word) {
+        if (word == null || word.isEmpty()) return word;
+        return word.substring(0, 1).toUpperCase() + word.substring(1);
+    }
+
+    public static String capitalizeLine(String line) {
+        String[] words = line.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (String w : words) {
+            sb.append(capitalize(w)).append(" ");
+        }
+        return sb.toString().trim();
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a line of lowercase words: ");
+        String line = input.nextLine();
+
+        System.out.println("Capitalized: " + capitalizeLine(line));
+
+        input.close();
+    }
+}
